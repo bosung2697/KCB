@@ -77,3 +77,4 @@ Event::listen('article.created', function ($article){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
