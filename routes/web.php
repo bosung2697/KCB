@@ -78,3 +78,20 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('mail', function(){
+    $article=App\Article::with('user')->find(1);
+    return Mail::send(
+        'emails.articles.created',
+//        ['text'=>'emails.articles.created-text'],
+        compact('article'),
+        function($message) use($article){
+            $message->from('bosung2697@gmail.com', '김보성님');
+            $message->to('bosung2697@naver.com', 'petitebo@naver.com');
+            $message->subject('새글이 등록되었습니다.- '.$article->title);
+            $message->cc('qhtjdrla@gmail.com');
+            $message->attach(storage_path('example.jpg'));
+
+        }
+    );
+});
+

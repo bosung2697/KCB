@@ -2,6 +2,11 @@
 
 return [
 
+    'to'=>[
+        'address'=>'bosung2697@naver.com',
+        'name'=>'Tester',
+    ],
+    ];
     /*
     |--------------------------------------------------------------------------
     | Mail Driver
@@ -56,7 +61,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'john@example.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'john@example.org'),
         'name' => env('MAIL_FROM_NAME', 'Admin'),
     ],
 
