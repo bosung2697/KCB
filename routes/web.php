@@ -36,7 +36,6 @@
 //Route::get('/',function(){
 //    return view('welcome');
 //});
-Route::get('/','WelcomeController@index');
 Route::get('auth/login',function(){
     $credentials=[
         'email'=>'john@example.com',
@@ -54,7 +53,7 @@ Route::get('protected',['middleware'=>'auth', function(){
     }
     return 'Welcome '.auth()->user()->name;
 }]);
-Route::get('auth/logout',function(){
+Route::get('/logout',function(){
     auth()->logout();
     return 'Logged Out';
 });
@@ -66,7 +65,7 @@ Route::resource('articles', 'ArticlesController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 //DB::listen(function($query){
 //    var_dump($query->sql);
 //});
@@ -77,6 +76,9 @@ Event::listen('article.created', function ($article){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/navbar', function(){
+    return view('layouts.navbar');
+});
 
 Route::get('mail', function(){
     $article=App\Article::with('user')->find(1);

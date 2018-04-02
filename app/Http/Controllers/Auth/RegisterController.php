@@ -50,8 +50,12 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|string|max:255',
+            'username' => 'required|string|max:255|unique:users',
+            'phone' => 'required|string|min:10|max:11|unique:users',
+            'birth'=>'required|date',
+            'gender'=> 'required|string',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:10|max:20|confirmed',
         ]);
     }
 
@@ -65,8 +69,21 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'username' => $data['username'],
+            'phone' => $data['phone'],
+            'birth'=> $data['birth'],
+            'gender'=> $data['gender'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+    public function store(Request $request){
+
+        $user=\App\User::create($request->all());
+        if(!$user){
+            return back()->with('flash_message', '다시 기입해주시길 바랍니다.')->withInput();
+        }
+        return redirect(route('home'))->with('flash_message','회원가입이 완료되었습니다.');
+
     }
 }
