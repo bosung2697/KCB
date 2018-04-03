@@ -57,9 +57,6 @@ Route::get('/logout',function(){
     auth()->logout();
     return 'Logged Out';
 });
-Route::get('/master',function(){
-    return view('/layouts/master');
-});
 Route::resource('articles', 'ArticlesController');
 
 
