@@ -24,15 +24,18 @@
     <div id="app">
 
         @include('layouts.navbar')
+        @include('layouts.navbar_search')
         @if(session()->has('flash_message'))
             <div class="alert alert-info" role="alert">
                 {{session('flash_message')}}
             </div>
         @endif
         @yield('content')
+
         <main class="py-4">
 
         </main>
+        @include('partials.footer')
     </div>
 
     <!-- Scripts -->
