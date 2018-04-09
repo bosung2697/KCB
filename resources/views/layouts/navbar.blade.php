@@ -1,5 +1,5 @@
 <div class="navigationheader">
-    <a href="/home"><img src=" " title="logo" alt="logo" align="left" style="margin-left: 14vw;"></a>
+    <a href="/"><img src=" " title="logo" alt="logo" align="left" style="margin-left: 14vw;"></a>
     <ul>
         <li><a href="/login">로그인</a></li>
         <li><a href="/register">회원가입</a></li>
