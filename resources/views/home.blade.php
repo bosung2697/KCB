@@ -180,7 +180,7 @@
 
         <div id="hotfocus" class="w3-container menu1">
             <h2>HOTFOCUS</h2>
-            <p>무료샘플이라능</p>
+            <p>핫폭스</p>
         </div>
         <div id="freesample" class="w3-container menu1" style="display:none">
             <h2>무료샘플</h2>
@@ -286,10 +286,6 @@
             <img src="" width="100px">
             <img src="" width="100px">
             <img src="" width="100px">
-            <img src="" width="100px">
-            <img src="" width="100px">
-
-
 
         </div>
     </div>

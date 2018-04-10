@@ -15,19 +15,19 @@
     margin-right:2vw;
 }
 .navigationmenu{
-    border: 1px solid black;
+    border: 0.1vw solid black;
     text-align: center;
 
 }
 .navigationmenu ul{
-    margin-bottom:0px;
+    margin-bottom:0;
     text-align:center;
 }
 
 .navigationmenu li {
     display: inline-block;
     margin:1vw 4vw;
-    line-height: 0px;
+    line-height: 0;
 }
 .searchbarcontainer{
     text-align: center;
