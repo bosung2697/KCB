@@ -15,7 +15,7 @@ class ArticlesController extends Controller
     public function index()
     {
         $articles=\App\Article::latest()->paginate(3);
-        dd(view('articles.index', compact('articles'))->render());
+//       dd(view('articles.index', compact('articles'))->render());
         return view('articles.index', compact('articles'));
     }
 
@@ -69,10 +69,10 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(\App\Article $article)
     {
-        $article=\App\Article::findOrFail($id);
-        debug($article->toArray());
+//        $article=\App\Article::findOrFail($id);
+//        debug($article->toArray());
         return view('articles.show',compact('article'));
     }
 

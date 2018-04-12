@@ -1,3 +1,20 @@
-<h3>Show Page</h3>
-<h6>{{ $article->title }}</h6>
-<p>{{ $article->content }}</p>
+@extends('layouts.app')
+@section('content')
+    <div class="page-header">
+        <h4>포럼<small> / {{$article->title}}</small></h4>
+    </div>
+    <article>
+        @include('articles.partial.article', compact('article'))
+        <p>{!! markdown($article->content) !!}</p>
+    </article>
+    <div class="text-center action__article">
+        <a href="{{route('articles.edit', $article->id)}}" class="btn btn-info">
+            <i class="fa fa-pencil"></i>글 수정
+        </a>
+        <button class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>글 삭제
+        </button>
+        <a href="{{route('articles.index')}}" class="btn btn-default">
+            <i class="fa fa-list"></i>글 목록
+        </a>
+    </div>

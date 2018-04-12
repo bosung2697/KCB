@@ -169,41 +169,53 @@
 
 </style>
 @section('content')
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="searchbarcontainer">
+    <div>
+        <form action="/action_page.php" style="text-align: center;">
+            <input type="search" name="searchbar" style="width:30%;">
+            <button type="submit"><img src=""></button>
+        </form>
+    </div>
+    <div>
+        <a href=""><p class="navbarotherpage">TODAY 보상 공고/공시</p></a>
+        <a href=""><p class="navbarotherpage">보상/용역 대행 컨설팅</p></a>
+    </div>
+</div>
+
 <div class="body1">
     <div class="grid-item">
-        <div class="homemenu1">
-           <button class="homemenu1item" onclick="openmenu1('hotfocus')">HOT 포커스</button>
-           <button class="homemenu1item" onclick="openmenu1('freesample')">무료샘플</button>
-           <button class="_tothepage"><a href="">+더보기</a></button>
-        </div>
+    <div class="homemenu1">
+       <button class="homemenu1item" onclick="openmenu1('hotfocus')">HOT 포커스</button>
+       <button class="homemenu1item" onclick="openmenu1('freesample')">무료샘플</button>
+       <button class="_tothepage"><a href="">+더보기</a></button>
+    </div>
 
-        <div id="hotfocus" class="w3-container menu1">
-            <h2>HOTFOCUS</h2>
-            <p>핫폭스</p>
-        </div>
-        <div id="freesample" class="w3-container menu1" style="display:none">
-            <h2>무료샘플</h2>
-            <p>무료샘플이라능</p>
-        </div>
+    <div id="hotfocus" class="w3-container menu1">
+        <h2>HOTFOCUS</h2>
+        <p>핫폭스</p>
+    </div>
+    <div id="freesample" class="w3-container menu1" style="display:none">
+        <h2>무료샘플</h2>
+        <p>무료샘플이라능</p>
+    </div>
     </div>
     <div class="grid-item">
-        공지사항
-        <a href="" class="_tothepage">+더보기</a>
-        <hr>
-        <div>
-            <ul>
-                <li>
-                    보상과 관련된 궁금증은 저희가 풀어드리겠습니다.<br>
-                </li><li>
-                    보상과 관련된 궁금증은 저희가 풀어드리겠습니다.<br>
-                </li><li>
-                    보상과 관련된 궁금증은 저희가 풀어드리겠습니다.<br>
-                </li><li>
-                    보상과 관련된 궁금증은 저희가 풀어드리겠습니다.<br>
-                </li>
-            </ul>
-        </div>
+    공지사항
+    <a href="" class="_tothepage">+더보기</a>
+    <hr>
+    <div>
+        <ul>
+            <li>
+                보상과 관련된 궁금증은 저희가 풀어드리겠습니다.<br>
+            </li><li>
+                보상과 관련된 궁금증은 저희가 풀어드리겠습니다.<br>
+            </li><li>
+                보상과 관련된 궁금증은 저희가 풀어드리겠습니다.<br>
+            </li><li>
+                보상과 관련된 궁금증은 저희가 풀어드리겠습니다.<br>
+            </li>
+        </ul>
+    </div>
     </div>
 </div>
 {{--<div class="advbanner">--}}

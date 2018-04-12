@@ -57,10 +57,18 @@ Route::get('/logout',function(){
     auth()->logout();
     return 'Logged Out';
 });
-Route::resource('articles', 'ArticlesController');
+Route::resource('/articles', 'ArticlesController');
+
+Route::get('/asking', function(){
+    return view('asking');
+
+});
+Route::get('/uploadfile','UploadFileController@index');
+Route::post('/uploadfile','UploadFileController@showUploadFile');
 
 
 Auth::routes();
+Route::get('/agreement', 'AgreementController@index');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 //DB::listen(function($query){
@@ -72,6 +80,9 @@ Event::listen('article.created', function ($article){
 });
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/intro', 'IntroController@index');
+
 Route::get('/navbar', function(){
     return view('layouts.navbar');
 });
@@ -88,8 +99,8 @@ Route::get('mail', function(){
             $message->subject('새글이 등록되었습니다.- '.$article->title);
             $message->cc('qhtjdrla@gmail.com');
             $message->attach(storage_path('example.jpg'));
-
         }
     );
 });
+
 
